@@ -11,7 +11,6 @@ if __name__ == '__main__':
     weather_key = file.read()
 
     def get_weather(city, weather_key):
-        print(weather_key)
         url = "https://api.openweathermap.org/data/2.5/forecast"
         params = {'APPID': weather_key, 'q':city, 'units': 'Metric'}
         response = requests.get(url,params=params)
